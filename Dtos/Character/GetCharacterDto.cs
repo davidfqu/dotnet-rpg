@@ -1,9 +1,13 @@
-
+using System;
 using System.Collections.Generic;
-
-namespace dotnet_rpg.Models
+using System.Linq;
+using System.Threading.Tasks;
+using dotnet_rpg.Models;
+using dotnet_rpg.Dtos.Weapon;
+using dotnet_rpg.Dtos.Skill;
+namespace dotnet_rpg.Dtos.Character
 {
-    public class Character
+    public class GetCharacterDto
     {
         public int Id { get; set; }
         public string Name { get; set; } = "Frodo";
@@ -12,9 +16,8 @@ namespace dotnet_rpg.Models
         public int Defense { get; set; } = 10;
         public int Intelligence { get; set; } = 10; 
         public RpgClass Class { get; set; } = RpgClass.knight;
-        public User User {get; set;}
-        public Weapon Weapon { get; set; }
-        public List<Skill> Skills { get; set; }
+        public GetWeaponDto Weapon {get; set;}
+        public List<GetSkillDto> Skills { get; set; }
         public int Fights { get; set; }
         public int Victories { get; set; }
         public int Defeats { get; set; }
